@@ -27,25 +27,17 @@ scissors = '''
 ---.__(___)
 '''
 
-def print_picture(number):
-    if number == 0:
-        print(rock)
-    elif number == 1:
-        print(paper)
-    elif number == 2:
-        print(scissors)
-    else:
-        print("Invalid Choice of Number")
+options = [rock, paper, scissors]
 
 
 print("Welcome to Rock Paper Scissors game")
 
 your_choice = int(input("What do you choose ? Type 0 for Rock🪨, 1 for paper📄, 2 for scissors✂️\n"))
-print_picture(your_choice)
+print(options[your_choice])
 
 print("Computer chose: ")
 computer_choice = random.randint(0, 2)
-print_picture(computer_choice)
+print(options[computer_choice])
 
 if your_choice == computer_choice:
     print("Game drawn😛")
